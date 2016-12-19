@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<title>jQuery CHAT SQlite版 with おえかき カスタマイズ</title>
+<script type="text/javascript" src="common/js/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="common/js/jquery.chat.js"></script>
+<script type="text/javascript" src="common/js/color.js"></script>
+<link href="common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+  <div id="logo" class="pc">
+    <div id="lg_left">CUSTOMIZE</div><!-- ルーム名は短めに -->
+  </div>
+  <div id="log" data-lasthash="" data-slide="on"><ul></ul></div>
+</div>
+
+<script type="text/javascript">
+/*
+ * セッティング
+ */
+   $(function(){
+      $('body').jqueryChat({
+        'room_id'    : '001', //部屋ID
+        'reload'     : 5000,         //更新秒数 default:10000(10秒)
+        'readlog'    : true,          //HTMLを更新(初見も)時にログを見せるかどうか
+        'delcookie'  : false,         //HTMLを更新時にcookieに記録している名前を消すかどうか
+        'bt_name'    : 'お名前を送信', //入室ボタンの名前
+        'bt_chat'    : '書き込むよ!',  //書き込みボタンの名前
+        'mes_logout' : '退室するの(´・ω・`)?', //退室アラートのメッセージ
+        'err_name'   : 'お名前を書いてね!',      //名前未記入時のエラーメッセージ
+        'err_upload' : 'アップロード失敗したみたい(´・ω・`)', //ファイルアップロードに失敗したときのメッセージ
+        'err_write'  : '何も書いてないよ(´・ω・`)?',  //チャット未記入時のエラーメッセージ
+        'err_wnig'   : '何かエラーぽい(´・ω・`)',     //よく判らないときのメッセージ
+        'log_login'  : true,           //ログイン時に管理人メッセージを記録するかどうか
+        'login'      : 'さんがきたっ',  //↑有効のとき、名前の後に付くメッセージ
+        'log_logof'  : true,           //ログアウト時に管理人メッセージを記録するかどうか
+        'logout'     : 'さんが帰ったみたい(´・ω・`)',//↑有効のとき、名前の後に付くメッセージ
+        'flaggmap'   : true, //現在地取得機能を使うかどうか
+        'gmap'       : '送信すると貴方の位置情報が相手に知られます。宜しいですか？', //↑その注意文
+        'background' : '#669999', //ログ部分の背景色
+        'fontcolor'  : '#FFFFFF', //メッセージなどの文字色
+        'headerbg'   : '#336666', //ヘッダーの背景色
+      });
+   });
+</script>
+
+</body>
+</html>

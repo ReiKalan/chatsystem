@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<title>jQuery CHAT SQlite版 with おえかき BASIC STYLE</title>
+<script type="text/javascript" src="common/js/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="common/js/jquery.chat.js"></script>
+<script type="text/javascript" src="common/js/color.js"></script>
+<link href="common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+  <div id="logo" class="pc">
+    <div id="lg_left">BASIC STYLE</div><!-- ルーム名は短めに -->
+  </div>
+  <div id="log" data-lasthash="" data-slide="on"><ul></ul></div>
+</div>
+
+<script type="text/javascript">
+/*
+ * セッティング
+ */
+   $(function(){
+      $('body').jqueryChat({
+        'room_id'    : '002'//部屋ID
+      });
+   });
+</script>
+
+</body>
+</html>
